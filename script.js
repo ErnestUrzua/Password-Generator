@@ -1,11 +1,13 @@
 //length validation function
-function length(x) {
-  var x;
+function lengthValidation(x) {
+
   // If length is Not a Number or less than 8 or greater than 128
   if (isNaN(x) || x < 8 || x > 128) {
     alert("Input not valid, please try again");
+   // location.reload();
   } 
   else {
+    //do nothing proceed
   }
 }
 
@@ -15,8 +17,8 @@ var generateBtn = document.querySelector("#generate");
 //added in prompt to ask user for length
 var length = prompt("Please choose a password length between 8 and 128 characters");
 
-//call length function
-//length(length);
+//call length function to validate length of string 
+lengthValidation(length);
 
 //add in prompt for password that is "response" length with at lease 1 uppercase, 1 lowercase , 
 alert("you must select at least 1 character type uppercase, lowercase, and special characters in order to be a valid password.");
