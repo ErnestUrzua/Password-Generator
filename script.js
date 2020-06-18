@@ -38,14 +38,26 @@ if(lengthValid === true) {
 
   //validate the users character selections to include at least 1 of the 3 character types
 
+  function generatePassword(u,l,s);
+  var upperCase = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","Q","Y","Z"];  
+  var lowerCase = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","q","y","z"];
+  //generate random upercase letters
+      //go thru array of letters
+      //use math.random in for loop to select each index up to 30
+      
+    //generate random lowercase letters
 
-  // Write password to the #password input
+    //generate random special characters
+
+
+    var x = Math.floor((Math.random() *128) + 8);
+
+  // Write password to the password box
   function writePassword() {
     var password = generatePassword();
     var passwordText = document.querySelector("#password");
-
     passwordText.value = password;
-
+   
   }
 
   // Add event listener to generate button
