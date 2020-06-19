@@ -43,10 +43,19 @@ if (lengthValid === true) {
   //ask if they want number characters
   var numberCharacter = confirm("Do you want to include number characters?")
 
+  
   //validate at least 1  type of character is present that user specified
-  //CODE HERE//
+  function validateChoices() {
+    if (uppercase === false && lowercase === false && specialCharacter === false && numberCharacter === false ){
+      alert("You must select at least one type");
+    }
+  }
 
-  function generatePassword(){
+  //checks if user selected at least one of criteria
+  validateChoices();
+
+
+  function generatePassword() {
     var upperCase = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","Q","Y","Z"];  
     var lowerCase = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","q","y","z"];
     var special = ["!","@","#","$","%","^","&","*","(",")","_","+"];
