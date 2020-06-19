@@ -1,4 +1,5 @@
 var lengthValid = false;
+var password; //final password
 
 //length validation function
 function lengthValidation(x) {
@@ -51,7 +52,7 @@ if(lengthValid === true) {
     var numbers = ["1","2","3","4","5","6","7","8","9"];
     //var count = 0;  
     var final = []; //array to hold final string 
-    var password;
+   
 
     //for loop of user specified length
     while (final.length < length){
@@ -84,12 +85,10 @@ if(lengthValid === true) {
             // console.log(final[x]);
           }
        password = final.join();//put final array into password
-       console.log(password);
+       console.log(password);//works outputting to console
     }
   }
   
-
-
   
   // Write password to the password box
   function writePassword() {
@@ -99,7 +98,6 @@ if(lengthValid === true) {
     //console.log(password);
    
   }
-
 
   // Add event listener to generate button
   generateBtn.addEventListener("click", writePassword());
