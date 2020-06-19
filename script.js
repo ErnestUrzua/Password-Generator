@@ -54,7 +54,7 @@ if(lengthValid === true) {
     var password;
 
     //for loop of user specified length
-    for (var i = 0;i<length;i++){
+    while (final.length < length){
 
           if (uppercase === true) {
             //take a random index from upperCase[]
@@ -84,20 +84,19 @@ if(lengthValid === true) {
             // console.log(final[x]);
           }
        password = final.join();//put final array into password
-       
+       console.log(password);
     }
   }
   
 
-  
-    
 
+  
   // Write password to the password box
   function writePassword() {
     generatePassword();
     var passwordText = document.querySelector("#password");
     passwordText.value = password;
-    console.log(password);
+    //console.log(password);
    
   }
 
