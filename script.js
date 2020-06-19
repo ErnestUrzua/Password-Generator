@@ -1,4 +1,4 @@
-var lengthValid = false;
+var lengthValid = false; //boolean flag password length 
 var password; //final password
 
 //length validation function
@@ -24,7 +24,8 @@ var length = prompt("Please choose a password length between 8 and 128 character
 //call length function to validate length of string 
 lengthValidation(length);
 
-if(lengthValid === true) {
+//if the length is valid then proceed 
+if (lengthValid === true) {
 
   //add this to the html page instead of alert
   //add in prompt for password that is "response" length with at lease 1 uppercase, 1 lowercase , 
@@ -95,7 +96,6 @@ if(lengthValid === true) {
     generatePassword();
     var passwordText = document.querySelector("#password");
     passwordText.value = password;
-    //console.log(password);
    
   }
 
