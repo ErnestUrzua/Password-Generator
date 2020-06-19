@@ -7,11 +7,19 @@ function lengthValidation(x) {
   // If length is Not a Number or less than 8 or greater than 128
   if (isNaN(x) || x < 8 || x > 128) {
     alert("Input not valid, please try again");
-    
+    location.reload(); 
   } 
   else {
     lengthValid = true;
     //do nothing proceed
+  }
+}
+
+//validate at least 1  type of character is present that user specified
+function validateChoices() {
+  if (uppercase === false && lowercase === false && specialCharacter === false && numberCharacter === false ){
+    alert("You must select at least one type");
+    location.reload(); 
   }
 }
 
@@ -27,7 +35,6 @@ lengthValidation(length);
 //if the length is valid then proceed 
 if (lengthValid === true) {
 
-  //add this to the html page instead of alert
   //add in prompt for password that is "response" length with at lease 1 uppercase, 1 lowercase , 
   alert("you must select at least 1 character type uppercase, lowercase, and special characters in order to be a valid password.");
   
@@ -43,17 +50,9 @@ if (lengthValid === true) {
   //ask if they want number characters
   var numberCharacter = confirm("Do you want to include number characters?")
 
-  
-  //validate at least 1  type of character is present that user specified
-  function validateChoices() {
-    if (uppercase === false && lowercase === false && specialCharacter === false && numberCharacter === false ){
-      alert("You must select at least one type");
-    }
-  }
 
   //checks if user selected at least one of criteria
   validateChoices();
-
 
   function generatePassword() {
     var upperCase = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","Q","Y","Z"];  
