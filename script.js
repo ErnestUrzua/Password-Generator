@@ -61,35 +61,35 @@ if(lengthValid === true) {
             //take a random index from upperCase[]
             x = Math.floor((Math.random() * upperCase.length));
             final.push(upperCase[x]);
-            // console.log(final[x]);
+            
           }
 
           if (lowercase === true) {
             //take a random index from lowerCase
             x = Math.floor((Math.random() * lowerCase.length));
             final.push(lowerCase[x]);
-            // console.log(final[x]);
+           
           }
 
           if (specialCharacter === true) {
             //take a random index from lowerCase
             x = Math.floor((Math.random() * special.length));
             final.push(special[x]);
-            // console.log(final[x]);
+           
           }
           
           if (numberCharacter === true) {
             //take a random index from lowerCase
             x = Math.floor((Math.random() * numbers.length));
             final.push(numbers[x]);
-            // console.log(final[x]);
+            
           }
-       password = final.join();//put final array into password
-       console.log(password);//works outputting to console
+       password = final.join("");//put final array into password, use "" in argument to prevent commas
+       console.log(password);//output password to console
     }
   }
   
-  
+
   // Write password to the password box
   function writePassword() {
     generatePassword();
