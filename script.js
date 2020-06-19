@@ -58,33 +58,30 @@ if (lengthValid === true) {
     //for loop of user specified length
     while (final.length < length){
 
-          if (uppercase === true) {
+          if (uppercase === true && final.length < length) {
             //take a random index from upperCase[]
             x = Math.floor((Math.random() * upperCase.length));
             final.push(upperCase[x]);
-            
           }
 
-          if (lowercase === true) {
+          if (lowercase === true && final.length < length) {
             //take a random index from lowerCase
             x = Math.floor((Math.random() * lowerCase.length));
             final.push(lowerCase[x]);
-           
           }
 
-          if (specialCharacter === true) {
+          if (specialCharacter === true && final.length < length) {
             //take a random index from lowerCase
             x = Math.floor((Math.random() * special.length));
             final.push(special[x]);
-           
           }
           
-          if (numberCharacter === true) {
+          if (numberCharacter === true && final.length < length) {
             //take a random index from lowerCase
             x = Math.floor((Math.random() * numbers.length));
-            final.push(numbers[x]);
-            
+            final.push(numbers[x]);  
           }
+
        password = final.join("");//put final array into password, use "" in argument to prevent commas
        console.log(password);//output password to console
     }
@@ -96,7 +93,6 @@ if (lengthValid === true) {
     generatePassword();
     var passwordText = document.querySelector("#password");
     passwordText.value = password;
-   
   }
 
   // Add event listener to generate button
